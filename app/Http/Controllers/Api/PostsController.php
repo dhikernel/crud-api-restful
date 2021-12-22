@@ -4,7 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
-use App\Http\Requests\Api\StorePostRequest;
+use App\Http\Requests\Api\Posts\StorePostRequest;
+use App\Http\Requests\Api\Posts\UpdatePostRequest;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -73,7 +74,7 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdatePostRequest $request, $id)
     {
         $dataRequest = $request->all();
 

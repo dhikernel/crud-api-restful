@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Api;
+namespace App\Http\Requests\Api\Coments;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreComentRequest extends FormRequest
+class UpdateComentRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class StoreComentRequest extends FormRequest
      */
     // public function authorize()
     // {
-    //     return true;
+    //     return false;
     // }
 
     /**
@@ -26,7 +26,7 @@ class StoreComentRequest extends FormRequest
         return [
             'id_user' => 'integer',
             'id_post' => 'integer',
-            'coment' => 'required|unique:coments|min:3'
+            'coment' => 'required|min:3'
         ];
     }
 

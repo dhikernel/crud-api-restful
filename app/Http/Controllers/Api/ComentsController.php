@@ -3,7 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Api\StoreComentRequest;
+use App\Http\Requests\Api\Coments\StoreComentRequest;
+use App\Http\Requests\Api\Coments\UpdateComentRequest;
 use Illuminate\Support\Facades\DB;
 use App\Models\Coment;
 use Illuminate\Contracts\Cache\Store;
@@ -58,7 +59,7 @@ class ComentsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateComentRequest $request, $id)
     {
         $comentRequest = $request->all();
 
