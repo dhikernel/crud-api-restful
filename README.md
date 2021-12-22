@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # crud-api
 CRUD API - LARAVEL
 =======
